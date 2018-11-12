@@ -5,6 +5,7 @@ import ActivityIndicators from '../pages/ActivityIndicators';
 import CheckItems from '../pages/CheckItem';
 import DatePickers from '../pages/DatePicker';
 import InputItems from '../pages/InputItem';
+import Results from '../pages/Result';
 
 
 export default routes = {
@@ -14,6 +15,7 @@ export default routes = {
     ActivityIndicator:{screen:ActivityIndicators},
     CheckItems:{screen:CheckItems},
     DatePickers:{screen:DatePickers},
-    InputItem:{screen:InputItems}
+    InputItem:{screen:InputItems},
+    Results:{screen:Results}
 
 }

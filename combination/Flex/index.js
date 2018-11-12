@@ -1,6 +1,7 @@
 import React from "react";
 import { View } from "react-native";
 import PropTypes from "prop-types";
+import { DropTarget } from "react-dnd";
 
 const alias = {
   around: "space-around",
@@ -9,21 +10,47 @@ const alias = {
   start: "flex-start",
   center: "center"
 };
-class None extends React.Component {
-  render() {
-    const styles = {
-      height: 50,
-      width: "100%"
-    };
-
-    return (
-      <View style={styles}>
-        <Text>None</Text>
-      </View>
-    );
+const getListStyle = (canDrop, dropStyle) => ({
+  // background: isDraggingOver ? "lightblue" : "lightgrey",
+  //   padding: grid,
+  minHeight: "100%",
+  overflow: "auto",
+  borderWidth: canDrop ? "1px" : "none",
+  borderStyle: canDrop ? "dotted" : "dashed",
+  padding: canDrop ? "30px" : null,
+  background: "red",
+  ...dropStyle
+});
+const chessSquareTarget = {
+  canDrop(props, monitor) {
+    return true;
+  },
+  hover(props, monitor, component) {},
+  drop(props, monitor, component) {
+    if (monitor.isOver({ shallow: true })) {
+      const parentId = props.parentId;
+      const item = monitor.getItem();
+      console.log(props.onDropAction);
+      props.onDropAction &&
+        props.onDropAction({
+          type: "global/addchildrenCom",
+          payload: { item: item.data, parentId: parentId, index: "max" }
+        });
+    }
   }
+};
+function collect(connect, monitor) {
+  return {
+    connectDropTarget: connect.dropTarget(),
+    isOver: monitor.isOver(),
+    canDrop: monitor.canDrop()
+  };
 }
-export default class Button extends React.Component {
+const Types = {
+  CHESSPIECE: "card"
+};
+@DropTarget(Types.CHESSPIECE, chessSquareTarget, collect)
+export default class Flex extends React.Component {
   static propTypes = {
     direction: PropTypes.oneOf([
       "row",
@@ -50,18 +77,27 @@ export default class Button extends React.Component {
   };
 
   render() {
-    const { direction, wrap, alignItems, align, children } = this.props;
+    const {
+      direction,
+      wrap,
+      alignItems,
+      align,
+      children,
+      connectDropTarget,
+      canDrop
+    } = this.props;
     const styles = {
       flex: 1,
       flexDirection: direction,
       flexWrap: wrap,
       alignItems: alias[alignItems] || alignItems,
       justifyContent: alias[align] || align,
-      padding: children ? null : 30,
-      border: "1px solid"
+      padding: children ? null : 30
     };
     console.log(children);
 
-    return <View style={styles}>{children}</View>;
+    return connectDropTarget(
+      <div style={getListStyle(canDrop, styles)}>{children}</div>
+    );
   }
 }

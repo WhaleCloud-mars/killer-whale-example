@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
   },
   overlayStyle: {
     left: 90,
-    marginTop: 20
+    marginTop: 20,
+    color: "white"
   },
   triggerStyle: {
     flexDirection: "row",

@@ -19,7 +19,8 @@ export default class Demo extends Component {
             {title:'ActivityIndicator',routeName:'ActivityIndicator'},
             {title:'CheckItems',routeName:'CheckItems'},
             {title:'DatePickers',routeName:'DatePickers'},
-            {title:'InputItem',routeName:'InputItem'}
+            {title:'InputItem',routeName:'InputItem'},
+            {title:'Results',routeName:'Results'}
             
         ]
     }

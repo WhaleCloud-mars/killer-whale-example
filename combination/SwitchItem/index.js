@@ -14,7 +14,6 @@ export default class SwitchItem extends React.Component {
     );
   }
 }
-
 const styles = StyleSheet.create({
   main: {
     flex: 1,

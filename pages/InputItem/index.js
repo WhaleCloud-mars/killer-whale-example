@@ -33,7 +33,13 @@ export default class InputItems extends React.Component {
                     title='单项选择标签'
 
                 ></RadioItem>
+                <RadioItem
+                    checked
+                    disabled={false}
+                    showImg={false}
+                    title='单项选择标签'
 
+                ></RadioItem>
             </View>
 
         )

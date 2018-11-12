@@ -3,34 +3,16 @@ import React from "react";
 import { View, Text } from "react-native";
 
 const tabs = [
-  {
-    title: (
-      <Badge text={"3"}>
-        <Text>首页</Text>
-      </Badge>
-    )
-  },
-  {
-    title: (
-      <Badge text={"99"}>
-        <Text>热点</Text>
-      </Badge>
-    )
-  },
-  {
-    title: (
-      <Badge dot>
-        <Text>发现</Text>
-      </Badge>
-    )
-  }
+  { title: 'First Tab' },
+      { title: 'Second Tab' },
+      { title: 'Third Tab' },
 ];
 export default class TabBadge extends React.Component {
   render() {
     return (
       <Tabs
         tabs={tabs}
-        initialPage={1}
+        initialPage={0}
         onChange={(tab, index) => {
           console.log("onChange", index, tab);
         }}

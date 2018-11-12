@@ -14,7 +14,13 @@ export default class Demo extends Component {
 
     state = {
         dataSource: [
-            {title:'test',routeName:'Test'}
+            {title:'test',routeName:'Test'},
+            {title:'Carousel',routeName:'Carousel'},
+            {title:'ActivityIndicator',routeName:'ActivityIndicator'},
+            {title:'CheckItems',routeName:'CheckItems'},
+            {title:'DatePickers',routeName:'DatePickers'},
+            {title:'InputItem',routeName:'InputItem'}
+            
         ]
     }
 

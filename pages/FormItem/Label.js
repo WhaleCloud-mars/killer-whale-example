@@ -3,15 +3,15 @@ import { View, Text, StyleSheet} from 'react-native';
 
 export default class Label extends Component {
   static defaultProps = {
-    value: '', 
-    valueStyle: '', 
+    labelValue: '', 
+    labelValueStyle: '', 
     backGroundColor: ''
   }
   render () {
-    let { value, valueStyle, backgroundColor} = this.props;
+    let { labelValue, labelValueStyle, backgroundColor} = this.props;
     return (
       <View style={[styles.defaultStyle, backgroundColor]}>
-        <Text style={valueStyle}>{value}</Text>
+        <Text style={labelValueStyle}>{labelValue}</Text>
       </View>
     );
   }

@@ -12,14 +12,14 @@ export default class DetailItem extends Component {
     valueStyle: {},
   }
   render () {
-    let { icon, imageTextStyle, title, label, labelStyle, value, valueStyle } = this.props;
+    let { icon, iconStyle, title, label, labelStyle, detailItemValue, detailItemValueStyle } = this.props;
     return (
       <View style={[styles.lineStyle]}>
         {
           !icon ?
             <View></View>
             :
-            <Image style={[styles.defualtImageStyle, imageTextStyle]} source={icon}/>
+            <Image style={[styles.defualtImageStyle, iconStyle]} source={icon}/>
         }
         <Text style={styles.tltleStyle}>{title}</Text>
         {
@@ -28,7 +28,7 @@ export default class DetailItem extends Component {
             :
             <Text style={labelStyle}>{label}</Text>
         }
-        <Text style={valueStyle}>{value}</Text>
+        <Text style={detailItemValueStyle}>{detailItemValue}</Text>
       </View>
     );
   }

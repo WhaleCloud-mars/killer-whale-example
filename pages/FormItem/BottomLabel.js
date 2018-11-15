@@ -4,18 +4,18 @@ import { View, Text, StyleSheet} from 'react-native';
 export default class BottomLabel extends Component {
   
   render () {
-    let { value, valueStyle} = this.props;
+    let { bottomLabelValue, bottomLabelValueStyle} = this.props;
     let tmpBorderColor = {
       borderColor: '#CCCCCC',
     }
-    if (valueStyle) {
-      if (valueStyle.color) {
-        tmpBorderColor.borderColor = valueStyle.color;
+    if (bottomLabelValueStyle) {
+      if (bottomLabelValueStyle.color) {
+        tmpBorderColor.borderColor = bottomLabelValueStyle.color;
       }
     }
     return (
       <View style={[styles.defaultStyle, tmpBorderColor]}>
-        <Text style={[styles.defaultValueStyle, valueStyle]}>{value}</Text>
+        <Text style={[styles.defaultValueStyle, bottomLabelValueStyle]}>{bottomLabelValue}</Text>
       </View>
     )
   }

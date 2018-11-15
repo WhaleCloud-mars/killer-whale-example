@@ -6,6 +6,7 @@ import CheckItems from '../pages/CheckItem';
 import DatePickers from '../pages/DatePicker';
 import InputItems from '../pages/InputItem';
 import Results from '../pages/Result';
+import FormItem from '../pages/FormItem'
 
 
 export default routes = {
@@ -16,6 +17,7 @@ export default routes = {
     CheckItems:{screen:CheckItems},
     DatePickers:{screen:DatePickers},
     InputItem:{screen:InputItems},
-    Results:{screen:Results}
+    Results:{screen:Results},
+    FormItem:{screen:FormItem}
 
 }

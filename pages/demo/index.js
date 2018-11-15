@@ -20,7 +20,8 @@ export default class Demo extends Component {
             {title:'CheckItems',routeName:'CheckItems'},
             {title:'DatePickers',routeName:'DatePickers'},
             {title:'InputItem',routeName:'InputItem'},
-            {title:'Results',routeName:'Results'}
+            {title:'Results',routeName:'Results'},
+            {title:'FormItem',routeName:'FormItem'}
             
         ]
     }

@@ -15,7 +15,7 @@ export default class BottomLabel extends Component {
     }
     return (
       <View style={[styles.defaultStyle, tmpBorderColor]}>
-        <Text style={[styles.defaultValueStyle, bottomLabelValueStyle]}>{bottomLabelValue}</Text>
+        <Text  onPress={this.props.onClick}  style={[styles.defaultValueStyle, bottomLabelValueStyle]}>{bottomLabelValue}</Text>
       </View>
     )
   }

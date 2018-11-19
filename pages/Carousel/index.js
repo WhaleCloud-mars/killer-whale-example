@@ -9,12 +9,16 @@ export default class Carousels extends React.Component {
         <View>
         <Carousel
          
-            selectedIndex={0}
-            vertical={false}
-            autoplay
-            autoplayInterval={3000}
-            infinite
-            dots={false}
+        dataItem={[{ url: 'https://zos.alipayobjects.com/rmsportal/TekJlZRVCjLFexlOCuWn.png' }, { url: 'https://zos.alipayobjects.com/rmsportal/AiyWuByWklrrUDlFignR.png' }]}
+        selectedIndex={0}
+        autoplay
+        infinite
+        autoplayInterval={3000}
+        dots
+        vertical={false}
+        imgStyle={{
+          height: 150
+        }}
         ></Carousel>
         </View>
       )

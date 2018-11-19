@@ -7,7 +7,9 @@ export default class Results extends React.Component {
   render() {
     return (
       <Result
-    {...this.props}
+    
+      {...this.props}
+      imgUrl={this.props.AlipayImg?(this.props.AlipayImg):(AlipayImg)}
       />
     );
   }

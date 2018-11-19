@@ -92,6 +92,7 @@ export default class FormItem extends React.Component {
             defaultContentProps.bottomContent.map(data => {
               return(
                 <BottomLabel 
+                  onClick={()=>{console.warn(data.bottomLabelValue)}}
                   bottomLabelValue = {data.bottomLabelValue}
                   bottomLabelValueStyle = {data.bottomLabelValueStyle}
                   key = {data.id}
@@ -173,6 +174,7 @@ const styles = StyleSheet.create({
 });
 
 const defaultContentProps = {
+  
   tipLeft : {
     leftImage : require('../Images/order_num.png'),
     text : '订单号：201802031011',

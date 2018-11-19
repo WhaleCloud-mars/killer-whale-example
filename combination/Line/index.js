@@ -6,7 +6,7 @@ export default class Line extends React.Component{
 
 
     render(){
-        console.warn(this.props.showType)
+       
         return(
             
             <View>

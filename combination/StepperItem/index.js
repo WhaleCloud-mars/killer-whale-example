@@ -17,11 +17,13 @@ export default class StepperItem extends React.Component {
 
 const styles = StyleSheet.create({
   main: {
-    flex: 1,
+  
     flexDirection: "row",
     alignItems: "center",
     marginLeft: 10,
-    marginRight: 10
+    marginRight: 10,
+    marginTop:10,
+    
   },
   text: {
     flex: 1,

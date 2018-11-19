@@ -16,12 +16,23 @@ export default class Demo extends Component {
         dataSource: [
             {title:'test',routeName:'Test'},
             {title:'Carousel',routeName:'Carousel'},
-            {title:'ActivityIndicator',routeName:'ActivityIndicator'},
+            {title:'RadioItem',routeName:'RadioItem'},
             {title:'CheckItems',routeName:'CheckItems'},
+            {title:'SwitchItem',routeName:'SwitchItem'},
+            {title:'NoticeBar',routeName:'NoticeBar'},
             {title:'DatePickers',routeName:'DatePickers'},
             {title:'InputItem',routeName:'InputItem'},
+            {title:'List',routeName:'List'},
             {title:'Results',routeName:'Results'},
-            {title:'FormItem',routeName:'FormItem'}
+            {title:'HomeBar',routeName:'HomeBar'},
+            {title:'FormItem',routeName:'FormItem'},
+            {title:'QuickEntry',routeName:'QuickEntry'},
+            {title:'Slider',routeName:'Slider'},
+            {title:'Stepper',routeName:'Stepper'},
+            {title:'ItemTypeOne',routeName:'ItemTypeOne'},
+            
+            
+        
             
         ]
     }

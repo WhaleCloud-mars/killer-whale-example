@@ -6,7 +6,7 @@ import DatePickers from '../pages/DatePicker';
 import InputItems from '../pages/InputItem';
 import Results from '../pages/Result';
 import FormItem from '../pages/FormItem'
-import Popoverss from '../pages/Popover';
+
 import QuickEntrys from '../pages/QuickEntry';
 import Sliders from '../pages/Slider';
 import StepperItems from '../pages/Stepper';
